@@ -46,5 +46,5 @@ setPermissions([
 <Route path="/" element={
   <Middleware permission={'user.show'}>
      <App/>
-  </PrivateRoute>
+  </Middleware>
 }/>
