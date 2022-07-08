@@ -34,6 +34,8 @@ setPermissions([
 ## Aplicar el permiso
 
 ```
+import {Can} from 'react-permission-lib'
+
 <Can permission={'user.show'}>
  // content
 </Can>
@@ -43,6 +45,8 @@ setPermissions([
 ## Aplicar el permiso a la ruta
 
 ```
+import {Middleware} from 'react-permission-lib'
+
 <Route path="/" element={
   <Middleware permission={'user.show'}>
      <App/>
