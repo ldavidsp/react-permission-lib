@@ -1,6 +1,6 @@
 # React permission lib
 
-Pruebas de como aplicar permisos a nuestro proyecto de react.
+Aplicar permisos a nuestro proyecto de react.
 
 ## Instalar
 ```
