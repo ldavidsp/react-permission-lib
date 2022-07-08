@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, {useState} from 'react';
+import {createRoot} from 'react-dom/client'
+import {Can, PermissionContext} from "./lib";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+  const [permissions, setPermissions] = useState([]);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  setTimeout(() => {
+    setPermissions([10, 40, 50, 60]);
+  }, 1000);
+
+  return (
+    <PermissionContext.Provider value={permissions}>
+      <div style={{width: 640, margin: "15px auto"}}>
+        <Can permission={10}>
+          <h1>Hello React</h1>
+        </Can>
+      </div>
+    </PermissionContext.Provider>
+  );
+}
+export default App;
+
+createRoot(document.getElementById("root")).render(<App/>)
