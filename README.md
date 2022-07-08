@@ -36,7 +36,7 @@ setPermissions([
 ```
 <Can permission={'user.show'}>
  // content
-</CanYou>
+</Can>
 
 ```
 
