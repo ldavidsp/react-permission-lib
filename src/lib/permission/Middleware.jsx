@@ -7,7 +7,6 @@ import PermissionContext from "../context/PermissionContext";
  *
  * @param children
  * @param props
- * @constructor
  */
 const Middleware = ({children, ...props}) => {
   const {permission} = props;
