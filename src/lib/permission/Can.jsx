@@ -8,8 +8,7 @@ import PermissionContext from "../context/PermissionContext";
  * @param props
  * @constructor
  */
-const Can = ({children, ...props}) => {
-  const {permission} = props;
+const Can = ({children, permission}) => {
   const permissions = useContext(PermissionContext);
   const checkPermission = permissions.find(item => item === permission);
   return checkPermission ? children : <></>;
